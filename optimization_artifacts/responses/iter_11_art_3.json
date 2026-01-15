@@ -1,0 +1,1 @@
+{ "events": [ {"event": "Transport strike", "location": "Germany", "severity": "High", "status": "Ongoing"}, {"event": "German Economic Institute cost estimate", "location": "Germany", "severity": "High", "status": "Ongoing"}, {"event": "Berlin strike announcement", "location": "Berlin, Germany", "severity": "Critical", "status": "Ongoing"}] }

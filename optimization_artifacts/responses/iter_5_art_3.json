@@ -1,0 +1,1 @@
+{ "events": [ {"event": "Train strike", "location": "Berlin, Germany", "severity": "High", "status": "Ongoing"}, {"event": "Cost estimate", "location": "Germany", "severity": "Critical", "status": "Ongoing"}, {"event": "Strike duration and impact", "location": "Germany", "severity": "High", "status": "Ongoing"}] }

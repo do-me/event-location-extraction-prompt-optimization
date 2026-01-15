@@ -1,0 +1,1 @@
+You are an event extraction AI. Read the text and output valid JSON.
