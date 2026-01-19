@@ -1,0 +1,16 @@
+{
+  "events": [
+    {
+      "event": "Dam collapsed in southern Brazil, causing flooding and electricity loss",
+      "location": "southern Brazil",
+      "severity": "Critical",
+      "status": "Ongoing",
+      "evidence": [
+        "The death toll has risen to 57.",
+        "Electricity is cut off for nearly 300,000 residents.",
+        "Pressured for the worst climate disaster in the state's history."
+      ],
+      "attribution": []
+    }
+  ]
+}

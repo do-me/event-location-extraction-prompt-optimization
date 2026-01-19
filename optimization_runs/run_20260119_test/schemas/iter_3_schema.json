@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "properties": {
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "event": {
+            "type": "string",
+            "description": "Exact phrasing or close paraphrase of the factual event as stated in the text (5-20 words). Must reflect the\u539f\u6587 wording or meaning without semantic distortion (e.g., 'pressed for' not 'urged')."
+          },
+          "location": {
+            "type": "string",
+            "description": "Precise geographic location where the event occurred. Use nation if national scope; exact city, region, or site if local. Never use media outlets, organizations, or reporting sources as locations. If the event spans multiple regions, list the primary affected location."
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "Critical",
+              "High",
+              "Moderate",
+              "Low"
+            ],
+            "description": "Critical: large-scale death/injury or systemic disruption with explicit numerical or concrete evidence (e.g., death toll \u226510, nationwide infrastructure collapse). High: direct life-threatening conditions with explicit evidence (e.g., starvation, acute medical crisis with quantified impact). Moderate: significant disruption without immediate life threat. Low: minor impact. Severity must be inferable only from explicit quantitative data or unambiguous qualitative indicators directly stated in the text\u2014never inferred from tone, context, or external knowledge."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Ongoing",
+              "Completed",
+              "Emerging"
+            ],
+            "description": "Ongoing: event is actively continuing with explicit temporal indicators (e.g., 'still ongoing', 'continues'). Completed: event has definitively ended with explicit end markers (e.g., 'lasted 35 hours', 'ended at 8 PM'). Emerging: event is developing but not yet fully manifest, with explicit indicators (e.g., 'rising', 'escalating', 'expected to worsen'). Status must be explicitly stated or logically deducible from clear temporal or directional language in the text\u2014no speculation allowed."
+          },
+          "evidence": {
+            "type": "string",
+            "description": "Direct quote or near-verbatim phrase from the text that unambiguously supports the event. Must be directly tied to the event and location. Evidence must not reference attributions (e.g., 'according to X' or 'X reported') unless the attribution is part of the factual event (e.g., 'X reported Y' where Y is the event). If the event is a cost estimate or attribution, the evidence must be the exact phrase stating the estimate, not a supporting operational detail."
+          }
+        },
+        "required": [
+          "event",
+          "location",
+          "severity",
+          "status",
+          "evidence"
+        ]
+      }
+    }
+  },
+  "required": [
+    "events"
+  ]
+}

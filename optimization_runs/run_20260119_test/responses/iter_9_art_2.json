@@ -1,0 +1,20 @@
+{
+  "events": [
+    {
+      "event": "Dam collapsed in southern Brazil, causing flooding",
+      "location": "southern Brazil",
+      "severity": "Critical",
+      "status": "Ongoing",
+      "evidence": [
+        "Heavy rains caused the dam to collapse.",
+        "A two-meter wave of muddy water was released.",
+        "Electricity is cut off for nearly 300,000 residents."
+      ]
+    }
+  ],
+  "status": "Ongoing",
+  "evidence": [
+    "The bursting of the small hydroelectric dam between Cotiporã and Bento Gonçalves sent a two-meter wave of muddy water.",
+    "Governor Eduardo Leite described it as 'the worst climate disaster in the state's history.'"
+  ]
+}

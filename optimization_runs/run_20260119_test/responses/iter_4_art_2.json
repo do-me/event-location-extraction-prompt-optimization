@@ -1,0 +1,26 @@
+{
+  "events": [
+    {
+      "event": "Dam collapsed in southern Brazil, causing flooding",
+      "location": "southern Brazil",
+      "severity": "Critical",
+      "status": "Ongoing"
+    },
+    {
+      "event": "Hydroelectric dam burst between Cotiporã and Bento Gonçalves",
+      "location": "between Cotiporã and Bento Gonçalves, southern Brazil",
+      "severity": "Critical",
+      "status": "Ongoing"
+    },
+    {
+      "event": "Electricity cut off affecting nearly 300,000 residents",
+      "location": "Yemen",
+      "severity": "High",
+      "status": "Ongoing"
+    }
+  ],
+  "evidence": ["The death toll has risen to 57."],
+  "location": "southern Brazil",
+  "severity": "Critical",
+  "status": "Ongoing"
+}

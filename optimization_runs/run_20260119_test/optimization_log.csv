@@ -1,0 +1,1568 @@
+Iteration,Article_ID,Student_Output,Teacher_Score,Teacher_Critique,Prompt_Used
+1,1,"{
+  ""events"": [
+    {
+      ""event"": ""Over 14 million people facing starvation"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""85,000 children may have died"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Martin Griffiths urged troop withdrawal"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Aid workers report rising displaced civilians"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Moderate"",
+      ""status"": ""Ongoing""
+    }
+  ]
+}",9,"The extraction is highly accurate in capturing the key events from the article, with correct locations, appropriate severity ratings, and proper status labeling. All four events are factually supported by the text: the starvation figure, child deaths, Martin Griffiths' call for troop withdrawal from Hodeida, and rising displacement reported by aid workers. The schema is correctly followed with all required fields present. The only minor issue is that the event 'Martin Griffiths urged troop withdrawal' could be more precise — the article states he 'pressed for' withdrawal, not 'urged,' which is a slight semantic inaccuracy. Additionally, the article mentions CAFOD's involvement and the context of the war lasting nearly four years, which could have been included as a supporting event but is not required in the schema. These are minor omissions that don't undermine the overall accuracy.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+1,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapse in southern Brazil"",
+      ""location"": ""Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Electricity cut off for 300,000 residents"",
+      ""location"": ""Brazil"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ]
+}",8,"The extraction correctly identifies two major events from the article — the dam collapse and the electricity cutoff — with appropriate locations and severity ratings. The schema is properly followed. However, it misses the critical detail of the death toll rising to 57, which is a central and highly significant event in the article. Additionally, the governor's statement about it being 'the worst climate disaster in the state's history' adds important context about the event's historical severity, which is not captured. These omissions reduce the completeness of the extraction.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+1,3,"{
+  ""events"": [
+    {
+      ""event"": ""Strike begins"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Deutsche Bahn operational impact"",
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Estimated daily cost"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ]
+}",8,"The extraction correctly identifies three key events from the article — the strike beginning, Deutsche Bahn's operational impact, and the estimated daily cost — with appropriate locations and severity levels. The schema is correctly followed. However, the status 'Ongoing' is inaccurate for all events; the strike is described as a 35-hour event that began at 2:00 AM, implying it has a defined end time and is not indefinitely ongoing. Additionally, the specific detail of the strike being led by the GDL train drivers' union is missing from the extraction, which is a relevant contextual fact. The severity for 'Estimated daily cost' is reasonable but could be considered indirect; the direct event is the strike, and cost is a consequence.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+2,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation; 85,000 children may have died"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": ""After nearly four years of war...""
+    },
+    {
+      ""event"": ""Martin Griffiths urged troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": ""Martin Griffiths, U.N. special envoy, pressed for troop withdrawal.""
+    },
+    {
+      ""event"": ""Aid workers report rising numbers of displaced civilians"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing"",
+      ""evidence"": ""Aid workers report rising numbers of displaced civilians.""
+    }
+  ]
+}",9,"The extraction is largely accurate and follows the required schema. All three events are factually supported by the article: the starvation crisis and child deaths in Yemen, Martin Griffiths' call for troop withdrawal from Hodeida, and aid workers reporting displaced civilians. Locations and severities are appropriately assigned, and evidence is correctly cited. The only minor issue is that the severity of the first event ('More than 14 million people facing starvation; 85,000 children may have died') is labeled 'Critical' — which is acceptable — but the article does not explicitly assign severity levels, so this is an inference. However, given the context, 'Critical' is a reasonable judgment. No events are missing; all key facts are captured.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+2,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapsed in southern Brazil causing flooding"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": ""The bursting of the small hydroelectric dam between Cotiporã and Bento Gonçalves sent a two-meter wave of muddy water.""
+    },
+    {
+      ""event"": ""High death toll reported after dam failure"",
+      ""location"": ""Cotiporã and Bento Gonçalves, southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": ""The death toll has risen to 57.""
+    },
+    {
+      ""event"": ""Electricity cut off affecting nearly 300,000 residents"",
+      ""location"": ""Southern Brazil"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing"",
+      ""evidence"": ""Electricity is cut off for nearly 300,000 residents.""
+    }
+  ]
+}",9,"The extraction is highly accurate and well-structured, correctly identifying three distinct events with appropriate locations, severities, statuses, and supporting evidence directly from the text. All events are factually supported by the article. The schema is correctly followed. The only minor issue is that the severity for 'Electricity cut off' is labeled 'High' — while accurate, the article's tone and context (e.g., 'worst climate disaster in the state's history') suggest a more unified 'Critical' severity across all events for consistency. This is a subtle judgment call, not a factual error.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+2,3,"{
+  ""events"": [
+    {
+      ""event"": ""GDL train drivers' union launched a 35-hour nationwide strike"",
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": ""The strike began at 2:00 AM and Deutsche Bahn noted only 20% of long-distance trains would run.""
+    },
+    {
+      ""event"": ""German Economic Institute estimates cost at 100 million euros per day"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing"",
+      ""evidence"": ""Deutsche Bahn noted significant operational disruption.""
+    }
+  ]
+}",7,"The extraction is mostly factual and follows the correct schema. The first event accurately captures the strike, its duration, location, and includes valid evidence. The severity rating of 'Critical' is reasonable given the nationwide disruption. However, the second event misrepresents the evidence: the German Economic Institute's cost estimate is a standalone fact and should not be supported by Deutsche Bahn's operational note, which is unrelated to the cost estimation. The evidence provided for the second event is incorrect and misleading. Additionally, the status 'Ongoing' is speculative — the article states the strike began at 2:00 AM but does not confirm it is still ongoing at the time of reporting. The extraction also misses the explicit mention of the strike duration (35 hours) in the second event’s context, which could have been used to reinforce the economic impact.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+3,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation; 85,000 children may have died"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Martin Griffiths urged troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""CAFOD calls for prayer for Yemen"",
+      ""location"": ""Jordan"",
+      ""severity"": ""Moderate"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [""more than 14 million people facing starvation"", ""85,000 children may have already died"", ""pressed for troop withdrawal"", ""We see immense suffering""]
+}",8,"The extraction is largely factual and correctly follows the schema with three well-defined events, appropriate locations, and accurate severity and status labels. The evidence provided directly supports the events. However, the location for the CAFOD event is incorrectly listed as 'Jordan' — CAFOD is calling for prayer from its base, but the event itself (the call for prayer) is about Yemen and should be associated with Yemen as the affected location, not the location of the NGO. Additionally, the phrase 'We see immense suffering' is cited as evidence but is not directly tied to a specific event in the extraction; it should be linked to the suffering of civilians or starvation, not listed as a standalone event. These are minor but notable inaccuracies.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+3,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapsed in southern Brazil causing flooding"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": ""The bursting of the small hydroelectric dam between Cotiporã and Bento Gonçalves sent a two-meter wave of muddy water.""
+    },
+    {
+      ""event"": ""High death toll reported due to power outage"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing"",
+      ""evidence"": ""High death toll reported as electricity cut off for nearly 300,000 residents.""
+    }
+  ]
+}",3,"The extraction contains significant factual errors and schema violations. First, the location for the second event is incorrectly listed as 'Yemen' when the article clearly states the incident occurred in southern Brazil. Second, the second event misattributes the death toll to a 'power outage' — the article links the death toll to the dam collapse and resulting flood, not the power outage. The power outage is a separate consequence, not the cause of deaths. Third, the schema requires accurate event descriptions tied to correct evidence, but the second event's evidence does not support its claim. Additionally, the extraction misses the governor's statement about it being 'the worst climate disaster in the state's history,' which is a key contextual detail. The severity and status labels are acceptable, but the factual inaccuracies severely undermine the extraction.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+3,3,"{
+  ""events"": [
+    {
+      ""event"": ""Strike began at 2:00 AM halting transport"",  
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": ""The strike began at 2:00 AM and only 20% of long-distance trains would run.""
+    },
+    {
+      ""event"": ""Deutsche Bahn reports reduced service"",  
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing"",
+      ""evidence"": ""Deutsche Bahn noted that only 20% of long-distance trains would run.""
+    },
+    {
+      ""event"": ""Estimated daily cost of disruption"",  
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing"",
+      ""evidence"": ""The German Economic Institute estimates the cost at 100 million euros per day.""
+    }
+  ]
+}",9,"The extraction is largely accurate and follows the required schema. All three events are factually supported by the article: the strike beginning at 2:00 AM and halting transport, Deutsche Bahn's report of reduced service, and the estimated daily cost of 100 million euros. The severity and status labels are appropriately assigned. The only minor issue is that the first event's description 'Strike began at 2:00 AM halting transport' slightly overstates the immediacy — the strike began at 2:00 AM and caused a halt, but the article doesn't claim total halt, only that the network 'ground to a halt' (idiomatic for severe disruption) and only 20% of trains ran. This is acceptable but slightly imprecise. No significant events are missing, though one could argue the GDL union's role as the organizer is omitted, but it's not required in the schema.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+4,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation; 85,000 children may have died"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Martin Griffiths urged troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""CAFOD calls for prayer for Yemen"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [""after nearly four years of war"", ""more than 14 million people facing starvation"", ""85,000 children may have already died"", ""pressed for troop withdrawal"", ""CAFOD calls for prayer for Yemen""]
+}",9,"The extraction is largely accurate and well-structured, correctly identifying three key events with appropriate locations, severity levels, and status. The facts align with the article: the humanitarian crisis in Yemen, Martin Griffiths' call for troop withdrawal, and CAFOD's prayer appeal are all properly extracted. The evidence list also accurately references supporting text. The only minor issue is that the severity level for 'CAFOD calls for prayer for Yemen' is labeled 'High,' which is reasonable but slightly less precise — the article frames this as a response to a critical situation, not an event of inherent 'High' severity. A more accurate severity might be 'Medium' or omitted since it's an advocacy action, not a direct humanitarian impact. No events are missing, and the schema is correctly followed.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+4,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapsed in southern Brazil, causing flooding"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Hydroelectric dam burst between Cotiporã and Bento Gonçalves"",
+      ""location"": ""between Cotiporã and Bento Gonçalves, southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Electricity cut off affecting nearly 300,000 residents"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [""The death toll has risen to 57.""],
+  ""location"": ""southern Brazil"",
+  ""severity"": ""Critical"",
+  ""status"": ""Ongoing""
+}",4,"The extraction contains factual errors and schema inconsistencies. The most critical error is misattributing the electricity cutoff location to Yemen, which is completely unrelated to the article's context of southern Brazil. This is a severe factual mistake. Additionally, the 'evidence' field only includes one sentence despite multiple impactful events (death toll, dam collapse, power outage, governor's statement) that should be cited. The schema is mostly correct, but the inclusion of a wrong location invalidates reliability. The event 'Dam collapsed in southern Brazil' and 'Hydroelectric dam burst between Cotiporã and Bento Gonçalves' are redundant and overlapping — they should be merged or clearly differentiated. The severity and status are correctly assigned, but the missing events include the death toll of 57 and the governor's statement, both significant contextual details.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+4,3,"{
+  ""events"": [
+    {
+      ""event"": ""Germany’s transport network halted; strike began at 2:00 AM"",
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Deutsche Bahn reports only 20% of long-distance trains will run"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""German Economic Institute estimates cost at 100 million euros per day"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [""transport halted"", ""only 20% of long-distance trains would run"", ""estimates the cost at 100 million euros per day""],
+  ""status"": [""Ongoing"", ""Ongoing"", ""Ongoing""],
+  ""location"": ""Germany""
+}",8,"The extraction is largely factual and correctly follows the schema with three well-defined events, appropriate severity levels, and consistent location and status tags. The evidence array accurately reflects key phrases from the text. However, the 'status' field is redundantly duplicated both inside each event and as a separate top-level array, which violates the principle of clean schema design — the status should be defined only within each event. Additionally, the top-level 'location' field is unnecessary since it's already specified in each event, introducing redundancy. These structural issues reduce the score slightly.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+5,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation; 85,000 children may have died"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Martin Griffiths urged troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Chris Bain reported rising numbers of displaced civilians"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""more than 14 million people are facing starvation"",
+    ""85,000 children may have already died"",
+    ""Martin Griffiths pressed for troop withdrawal from Hodeida""
+  ]
+}",8,"The extraction is largely accurate and follows the correct schema with properly structured events and evidence. The events capture key facts from the article: starvation and child deaths in Yemen, Martin Griffiths' call for troop withdrawal, and Chris Bain's report on displaced civilians. The locations and severity ratings are appropriate. However, the evidence list is incomplete—it omits the direct quote from Chris Bain about rising numbers of displaced civilians, which is a significant event in the extraction. Additionally, while the severity rating for displaced civilians is labeled 'High,' the article describes the overall situation as 'immense suffering,' which may warrant 'Critical' to align with the gravity of the context. These omissions and slight misalignment in severity reduce the score.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+5,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapsed in southern Brazil, causing flooding"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Hydroelectric dam burst between Cotiporã and Bento Gonçalves"",
+      ""location"": ""between Cotiporã and Bento Gonçalves, southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Electricity cut off affecting nearly 300,000 residents"",
+      ""location"": ""near the dam site in southern Brazil"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The death toll has risen to 57."",
+    ""Governor Eduardo Leite described it as 'the worst climate disaster in the state's history.'"",
+    ""Electricity is cut off for nearly 300,000 residents.""
+  ]
+}",9,"The extraction is largely accurate and well-structured, correctly identifying three key events (dam collapse, hydroelectric dam burst, electricity cutoff) with appropriate locations, severity ratings, and status. The evidence snippets directly support the events. The schema is correctly followed. The only minor issue is that the 'missing_info' field should note that the extraction does not include the death toll of 57 as a separate event, which is a significant humanitarian impact mentioned in the article and could reasonably be extracted as its own event. While not strictly required, including it would improve completeness.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+5,3,"{
+  ""events"": [
+    {
+      ""event"": ""German train strike halted transport network"",
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Deutsche Bahn reduced long-distance service to 20%"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""German Economic Institute estimates cost at 100 million euros per day"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The strike began at 2:00 AM."",
+    ""Deutsche Bahn noted only 20% of long-distance trains would run."",
+    ""The German Economic Institute estimates the cost at 100 million euros per day.""
+  ]
+}",9,"The extraction is largely accurate and follows the required schema. All three events are factually supported by the article: the strike halted transport, Deutsche Bahn reduced service to 20%, and the cost estimate is correctly cited. The severity and status labels are appropriately assigned. The evidence section correctly pulls direct quotes from the text. The only minor issue is that the event 'German train strike halted transport network' slightly overstates the scope — the article says the transport network 'ground to a halt,' which is figurative, not absolute; however, this is a reasonable summary. No critical facts are missing, and the schema is correctly structured.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+6,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation; 85,000 children may have died"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Martin Griffiths urged troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Chris Bain reported rising numbers of displaced civilians"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""more than 14 million people are facing starvation"",
+    ""85,000 children may have already died"",
+    ""We see immense suffering""
+  ]
+}",7,"The extraction correctly identifies three key events with appropriate locations and severity ratings, and the schema is properly followed. However, the evidence section is incomplete: it omits the direct quote from Chris Bain about displaced civilians and fails to include the reference to Martin Griffiths' call for troop withdrawal, which is a critical event. Additionally, the event 'We see immense suffering' is a subjective statement and not a factual event; it should not be listed as evidence. The evidence should directly support the events listed, not just paraphrase them. The extraction also misses mentioning CAFOD's role in calling for prayer, which is a relevant contextual event.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+6,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapsed in southern Brazil, causing flooding"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Hydroelectric dam burst between Cotiporã and Bento Gonçalves"",
+      ""location"": ""between Cotiporã and Bento Gonçalves, southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Electricity cut off affecting nearly 300,000 residents"",
+      ""location"": ""near the dam site in southern Brazil"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The death toll has risen to 57."",
+    ""Governor Eduardo Leite described it as 'the worst climate disaster in the state's history.'"",
+    ""Electricity is cut off for nearly 300,000 residents.""
+  ]
+}",9,"The extraction is largely accurate and follows the required schema. The three events are factually supported by the article: the dam collapse and flooding in southern Brazil, the specific burst between Cotiporã and Bento Gonçalves, and the electricity cutoff affecting 300,000 residents. The severity and status labels are appropriately assigned. The evidence snippets correctly support the events. The only minor issue is that the evidence list omits the detail about the 2-meter wave of muddy water and the governor’s full quote about it being the 'worst climate disaster in the state's history'—which could have been used to further substantiate the 'Critical' severity rating for the dam events. Also, the location for the electricity cutoff is vaguely stated as 'near the dam site' when the article implies it affects residents broadly in the region, not necessarily just near the site. These are small omissions but do not undermine the overall accuracy.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+6,3,"{
+  ""events"": [
+    {
+      ""event"": ""German train strike halted transport network"",
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Deutsche Bahn reduced long-distance service to 20%"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""German Economic Institute estimates cost at 100 million euros per day"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The strike began at 2:00 AM."",
+    ""Only 20% of long-distance trains would run."",
+    ""Deutsche Bahn noted the disruption."",
+    ""Estimates the cost at 100 million euros per day.""
+  ]
+}",9,"The extraction is largely accurate and follows the required schema. All three events are factually supported by the article: the strike halted transport, Deutsche Bahn reduced service to 20%, and the German Economic Institute estimated daily costs at 100 million euros. The severity and status labels are appropriately assigned. Evidence snippets are relevant and correctly cited. The only minor issue is that the evidence list includes 'Deutsche Bahn noted the disruption' — this is vague and not directly quoted; the article says 'Deutsche Bahn noted that only 20% of long-distance trains would run,' which is already captured in the event. A more precise evidence line would improve accuracy. No critical events are missing.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+7,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation; 85,000 children may have died"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Martin Griffiths urged troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Chris Bain reported rising numbers of displaced civilians"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""more than 14 million people are facing starvation"",
+    ""85,000 children may have already died"",
+    ""We see immense suffering""
+  ]
+}",8,"The extraction accurately captures the key events from the article with correct locations and appropriate severity/status labels. The events are factually supported by the text: the starvation and child mortality figures, Martin Griffiths' call for troop withdrawal, and Chris Bain's statement about displaced civilians are all correctly extracted. The schema is properly followed. However, the evidence section is incomplete—it includes 'We see immense suffering' which is a subjective quote, but omits direct evidence for the event about displaced civilians ('Aid workers report rising numbers of displaced civilians'), which should have been cited. Also, the event about CAFOD joining NGOs for prayer is entirely missing, which is a relevant contextual event in the article.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+7,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapsed in southern Brazil, causing flooding"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Hydroelectric dam burst between Cotiporã and Bento Gonçalves"",
+      ""location"": ""Cotiporã-Bento Gonçalves area"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Electricity cut off affecting nearly 300,000 residents"",
+      ""location"": ""near the dam site"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The death toll has risen to 57."",
+    ""Governor Eduardo Leite described it as 'the worst climate disaster in the state's history.'"",
+    ""Electricity is cut off for nearly 300,000 residents.""
+  ]
+}",9,"The extraction is largely accurate and follows the required schema. The three events are factually supported by the article: the dam collapse in southern Brazil, the specific burst between Cotiporã and Bento Gonçalves, and the electricity cutoff affecting 300,000 residents. Locations and severities are appropriately assigned. The evidence section correctly cites key supporting statements. The only minor flaw is that the evidence section omits the detail about the 2-meter wave of muddy water and the death toll of 57, both of which are significant factual details that could strengthen the evidentiary support. Additionally, while 'Ongoing' is reasonable for status, the article does not explicitly confirm the event is still ongoing — this is a slight inference. These are minor issues, not critical errors.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+7,3,"{
+  ""events"": [
+    {
+      ""event"": ""German transport network halted; train drivers' union launched 35-hour strike"",
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Deutsche Bahn reports only 20% of long-distance trains will run"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""German Economic Institute estimates cost at 100 million euros per day"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The strike began at 2:00 AM."",
+    ""Deutsche Bahn noted that only 20% of long-distance trains would run."",
+    ""Deutsche Bahn estimated the cost at 100 million euros per day.""
+  ]
+}",7,"The extraction correctly identifies three key events from the article and matches the schema structure with appropriate fields. The events are factually accurate and properly categorized by location, severity, and status. However, there is a factual error in the evidence section: it incorrectly states 'Deutsche Bahn estimated the cost at 100 million euros per day,' when the article attributes this estimate to the German Economic Institute. This misattribution reduces accuracy. Additionally, the severity rating for the cost estimate as 'High' is reasonable but not explicitly justified by the text — while acceptable, it introduces minor subjectivity. The status 'Ongoing' is appropriate given the strike began at 2:00 AM and no end time is provided. No major events are missing, but the extraction could have included the start time of the strike as a separate event or detail for completeness.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+8,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation in Yemen"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""85,000 children may have died in Yemen"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Martin Griffiths urged troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Displaced civilians rising in Yemen"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Emerging""
+    }
+  ],
+  ""evidence"": [
+    ""more than 14 million people are facing starvation"",
+    ""85,000 children may have already died"",
+    ""We see immense suffering"",
+    ""pressed for troop withdrawal from Hodeida""
+  ]
+}",9,"The extraction is largely accurate and follows the required schema. All events are factually supported by the text: the starvation figure, child deaths, Martin Griffiths' call for troop withdrawal, and rising displacement are all directly mentioned. The severity and status labels are appropriately assigned. The evidence section correctly cites direct quotes and facts from the article. The only minor issue is that 'We see immense suffering' is included in evidence but does not correspond to a specific event in the events list — it's a general statement that could have been used to support the severity of the starvation or displacement events, but its inclusion as standalone evidence is redundant and slightly misleading. This is a small flaw in evidence alignment, not factuality.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+8,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapsed in southern Brazil causing flooding"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Hydroelectric dam burst between Cotiporã and Bento Gonçalves"",
+      ""location"": ""between Cotiporã and Bento Gonçalves, southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Electricity cut off affecting nearly 300,000 residents"",
+      ""location"": ""near the dam site in southern Brazil"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The death toll has risen to 57."",
+    ""The bursting of the small hydroelectric dam sent a two-meter wave of muddy water."",
+    ""Governor Eduardo Leite described it as 'the worst climate disaster in the state's history.'""
+  ]
+}",9,"The extraction is largely accurate and well-structured. All events are factually supported by the article: the dam collapse in southern Brazil, the specific burst between Cotiporã and Bento Gonçalves, and the electricity outage affecting 300,000 residents are all correctly extracted with appropriate severity and status labels. The evidence snippets directly support the events. The schema is correctly followed. The only minor issue is that the location for the electricity outage is vaguely stated as 'near the dam site in southern Brazil' — the article does not specify the exact geographic scope of the outage, only that it affected nearly 300,000 residents, which could be broader than just 'near the dam site.' This slight over-specification reduces the score slightly. No major events are missing.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+8,3,"{
+  ""events"": [
+    {
+      ""event"": ""GDL train drivers' union launched a 35-hour nationwide strike"",
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Deutsche Bahn reported only 20% of long-distance trains would run"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""German Economic Institute estimates cost at 100 million euros per day"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The strike began at 2:00 AM"",
+    ""Deutsche Bahn noted that only 20% of long-distance trains would run"",
+    ""The German Economic Institute estimates the cost at 100 million euros per day""
+  ]
+}",9,"The extraction is largely accurate and follows the required schema. All three events are factually supported by the article: the GDL strike, Deutsche Bahn's 20% service reduction, and the €100M daily cost estimate are correctly extracted. The locations are properly set to 'Germany', and the severity and status labels are reasonable given the context. The evidence section correctly cites supporting sentences. The only minor flaw is that 'status': 'Ongoing' may be slightly misleading — the strike began at 2:00 AM and is 35 hours long, so unless the article's timestamp is current, we cannot confirm it is still ongoing at the time of reading. However, since no end time is given and the event is recent, 'Ongoing' is acceptable in context. A perfect score would require explicitly noting the strike's duration implies a finite end, but this is a minor interpretive nuance.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+9,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation; 85,000 children may have died"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Martin Griffiths urged troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Chris Bain reported rising numbers of displaced civilians"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""more than 14 million people are facing starvation"",
+    ""85,000 children may have already died"",
+    ""We see immense suffering""
+  ],
+  ""status"": [
+    ""Ongoing"",
+    ""Ongoing"",
+    ""Ongoing""
+  ],
+  ""evidence_minutes"": [
+    ""immense suffering"",
+    ""rising numbers of displaced civilians"",
+    ""pressing for troop withdrawal""
+  ]
+}
+",7,"The extraction is mostly factual and follows the correct schema with three events, evidence, and status arrays. The events accurately reflect the article: starvation in Yemen, Griffiths' call for troop withdrawal, and rising displacement. However, there are two key issues: 1) The 'evidence' array incorrectly includes 'We see immense suffering' — this is a quote from Chris Bain about the situation, not direct evidence for the events listed above it; the evidence should directly support each event (e.g., 'more than 14 million people are facing starvation' supports the first event, but 'immense suffering' is a paraphrase). 2) The 'evidence_minutes' array is mislabeled and contains unrelated phrases — 'immense suffering' and 'rising numbers of displaced civilians' are event details, not evidence, and 'pressing for troop withdrawal' is a verb phrase from the event, not supporting evidence. This confuses the purpose of the fields. Additionally, the evidence and evidence_minutes arrays are misaligned in content and structure.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+9,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapsed in southern Brazil, causing flooding"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""Heavy rains caused the dam to collapse."",
+        ""A two-meter wave of muddy water was released."",
+        ""Electricity is cut off for nearly 300,000 residents.""
+      ]
+    }
+  ],
+  ""status"": ""Ongoing"",
+  ""evidence"": [
+    ""The bursting of the small hydroelectric dam between Cotiporã and Bento Gonçalves sent a two-meter wave of muddy water."",
+    ""Governor Eduardo Leite described it as 'the worst climate disaster in the state's history.'""
+  ]
+}",8,"The extraction is largely factual and correctly follows the schema. The event description accurately reflects the article: the dam collapse due to heavy rains, the two-meter muddy wave, and the power outage to 300,000 residents are all supported. The severity is appropriately labeled 'Critical' and status 'Ongoing' aligns with the article's tone. The evidence provided is relevant. However, the extraction duplicates evidence across the event and top-level fields, which is redundant but not incorrect. The main missing element is the death toll of 57, which is a critical piece of information that should have been included in the event's evidence or as a separate metric. Additionally, the governor's quote is valuable but should be tied more explicitly to the event's severity rather than just listed separately.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+9,3,"{
+  ""events"": [
+    {
+      ""event"": ""Germany’s transport network halted; strike began at 2:00 AM"",
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Deutsche Bahn reports only 20% of long-distance trains will run"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""German Economic Institute estimates cost at 100 million euros per day"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The strike began at 2:00 AM"",
+    ""Deutsche Bahn noted that only 20% of long-distance trains would run"",
+    ""The German Economic Institute estimates the cost at 100 million euros per day""
+  ],
+  ""status"": [""Ongoing"", ""Ongoing"", ""Ongoing""],
+  ""evidence_minutes"": [
+    ""transport halted"",
+    ""strike began"",
+    ""cost estimate provided""
+  ]
+}",8,"The extraction is largely factual and correctly follows the schema with three well-defined events, appropriate locations, and accurate severity ratings. The evidence section correctly pulls direct quotes from the text. However, the 'evidence_minutes' field is incorrectly formatted—it should contain timestamps or minute-based evidence, but instead contains vague phrases like 'transport halted' and 'cost estimate provided', which are not minutes. Additionally, the status array duplicates the status field from each event, which is redundant but not incorrect. The main issue is the misuse of 'evidence_minutes', which misaligns with the implied intent of the schema (likely meant to capture time-related evidence like '2:00 AM'). This reduces the precision of the extraction.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+10,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation; 85,000 children may have died"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Martin Griffiths urged troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Chris Bain reported rising numbers of displaced civilians"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""more than 14 million people are facing starvation"",
+    ""85,000 children may have already died"",
+    ""We see immense suffering""
+  ],
+  ""status"": [""Ongoing"", ""Ongoing"", ""Ongoing""],
+  ""severityDescription"": ""Immense suffering reported; no explicit death toll provided"",
+  ""locationDescription"": ""Yemen""
+}",7,"The extraction is mostly accurate and follows the correct schema with three relevant events, appropriate locations, and consistent status/severity labels. The events are factually supported by the text: the starvation figure and child deaths are directly quoted, Griffiths' call for troop withdrawal is correctly attributed, and Bain's statement about displaced civilians is accurately captured. However, the evidence section is incomplete — it omits the direct quote 'Aid workers report rising numbers of displaced civilians,' which supports the third event. Additionally, the severityDescription incorrectly states 'no explicit death toll provided,' when the text explicitly states '85,000 children may have already died.' This misrepresentation undermines the accuracy of the severity assessment. The locationDescription is too vague; it should specify that the events are centered in Yemen, particularly Hodeida, as mentioned in the article.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+10,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapsed in southern Brazil, causing flooding"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Hydroelectric dam burst between Cotiporã and Bento Gonçalves"",
+      ""location"": ""between Cotiporã and Bento Gonçalves, southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Electricity cut off affecting nearly 300,000 residents"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The death toll has risen to 57."",
+    ""The bursting of the small hydroelectric dam sent a two-meter wave of muddy water."",
+    ""Governor Eduardo Leite described it as \""the worst climate disaster in the state's history.\""""
+  ],
+  ""status"": [""Ongoing"", ""Ongoing"", ""Ongoing""],
+  ""evidence"": [
+    ""\""Pressed for\"" to evacuate; \""the worst climate disaster\"""",
+    ""\""Two-meter wave of muddy water\"""",
+    ""\""Worst climate disaster in the state's history\""""
+  ]
+}",7,"The extraction is largely factual and correctly follows the schema with three events, evidence, and status arrays. The events accurately reflect the article: dam collapse, hydroelectric dam burst, and electricity cutoff. The severity ratings are appropriate, and locations are correctly specified. However, the evidence array contains duplicates and inconsistencies — the second evidence entry repeats phrasing from the first, and the original evidence list includes 'The death toll has risen to 57' and 'Governor Eduardo Leite described it as...,' which are not fully reflected in the second evidence array. Additionally, the death toll of 57 is a critical fact that should have been explicitly included as an event or at least as evidence for severity, but it is only mentioned in evidence without a corresponding event. This omission reduces the completeness of the extraction.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+10,3,"{
+  ""events"": [
+    {
+      ""event"": ""Transport network halted across Germany"",
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Strike began at 2:00 AM"",
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Deutsche Bahn reports only 20% of long-distance trains running"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""German Economic Institute estimates cost at 100 million euros per day"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The strike began at 2:00 AM"",
+    ""Deutsche Bahn noted that only 20% of long-distance trains would run"",
+    ""The German Economic Institute estimates the cost at 100 million euros per day""
+  ],
+  ""status"": [""Ongoing"", ""Ongoing"", ""Ongoing"", ""Ongoing""],
+  ""evidence_minutes"": [
+    ""transport halted"",
+    ""strike began"",
+    ""cost estimate provided"",
+    ""operational impact reported""]
+}
+",7,"The extraction is mostly factual and aligns with the article: the transport halt, strike timing, reduced train service, and cost estimate are all accurately captured. The schema structure is mostly correct with events, evidence, status, and evidence_minutes. However, there are two key issues: 1) The 'evidence_minutes' field incorrectly contains summaries of events rather than actual minutes (time values) from the text — it should reflect actual timestamps or durations, but instead it has descriptive phrases like 'transport halted', which misuses the field name. 2) The status array duplicates 'Ongoing' four times, which is redundant and not aligned with the event list structure — it should be part of each event object, not a separate array. These schema misalignments reduce accuracy. No major events are missing, but the field misuse undermines data integrity.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+11,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation; 85,000 children may have died"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Martin Griffiths urged troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Chris Bain reported rising numbers of displaced civilians"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""We see immense suffering"",
+    ""Pressed for troop withdrawal"",
+    ""Rising numbers of displaced civilians""
+  ],
+  ""status"": [""Ongoing"", ""Ongoing"", ""Ongoing""],
+  ""evidence_minutes"": [
+    ""immense suffering"",
+    ""urged for withdrawal"",
+    ""displaced civilians""
+  ]
+}",8,"The extraction is largely factual and correctly follows the schema with three well-defined events, appropriate locations, and accurate severity and status labels. The evidence and evidence_minutes are relevant and match the article content. However, the evidence_minutes field contains paraphrased or reworded phrases (e.g., 'urged for withdrawal' instead of 'pressed for troop withdrawal') which slightly misrepresents the original wording. Additionally, the event 'Chris Bain reported rising numbers of displaced civilians' is inaccurate — the article states that 'aid workers report' this, not Chris Bain directly. Chris Bain only commented on 'immense suffering.' This misattribution reduces accuracy. The status array is redundant since status is already included in each event object.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+11,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapsed in southern Brazil, causing flooding"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Hydroelectric dam burst between Cotiporã and Bento Gonçalves"",
+      ""location"": ""between Cotiporã and Bento Gonçalves, southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Electricity cut off affecting nearly 300,000 residents"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The death toll has risen to 57."",
+    ""The bursting of the small hydroelectric dam sent a two-meter wave of muddy water."",
+    ""Governor Eduardo Leite described it as 'the worst climate disaster in the state's history.'""
+  ],
+  ""status"": [""Ongoing"", ""Ongoing"", ""Ongoing""],
+  ""evidence_minutes"": [
+    ""57 High death toll"",
+    ""two-meter wave of muddy water"",
+    ""worst climate disaster""
+  ]
+}",9,"The extraction is largely accurate and well-structured, correctly identifying three key events (dam collapse, hydroelectric dam burst, electricity cutoff) with appropriate locations, severity ratings, and status. The evidence snippets are relevant and directly support the events. The schema is correctly followed. The only minor issue is that the 'evidence_minutes' field is misleading—it appears to be a paraphrased summary rather than actual minutes (time duration) of evidence, which could confuse interpretation. Also, while the severity for electricity cutoff is labeled 'High,' it could arguably be 'Critical' given the scale (300,000 residents affected) and context of a climate disaster, but this is a subjective judgment. No major factual errors or missing events are present.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+11,3,"{
+  ""events"": [
+    {
+      ""event"": ""GDL train drivers' union launched a 35-hour nationwide strike"",
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""The strike began at 2:00 AM."",
+        ""Deutsche Bahn noted that only 20% of long-distance trains would run."",
+        ""The German Economic Institute estimates the cost at 100 million euros per day.""
+      ]
+    }
+  ]
+}",9,"The extraction is largely accurate and well-structured. The event is correctly identified as the GDL train drivers' union launching a 35-hour nationwide strike in Germany, with appropriate severity ('Critical') and status ('Ongoing') based on the article's description of widespread disruption. The evidence provided directly supports the event's impact. The schema is correctly followed. The only minor issue is that the article does not explicitly state the strike is 'ongoing' at the time of writing — it only states when it began and its duration. 'Ongoing' is a reasonable inference but not explicitly confirmed, which slightly reduces the score. No events are missing.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+12,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation in Yemen"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""85,000 children may have died in Yemen"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Martin Griffiths pressed for troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Aid workers report rising numbers of displaced civilians"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""more than 14 million people are facing starvation"",
+    ""85,000 children may have already died"",
+    ""pressed for troop withdrawal from Hodeida"",
+    ""rising numbers of displaced civilians""
+  ],
+  ""status"": [""Ongoing"", ""Ongoing"", ""Ongoing"", ""Ongoing""],
+  ""evidence_minutes"": [
+    ""immense suffering"",
+    ""pressed for troop withdrawal"",
+    ""rising numbers of displaced civilians"",
+    ""calls for prayer for Yemen""
+  ]
+}",7,"The extraction is largely factual and correctly follows the schema with appropriate event categorization, locations, severity levels, and status. All four events are accurately derived from the text. However, there are two key issues: First, the 'evidence_minutes' field incorrectly includes 'calls for prayer for Yemen'—this is not evidence of an event but a separate action by CAFOD and NGOs, and it does not support any of the listed events. Second, the extraction misses the explicit mention of CAFOD joining NGOs in calling for prayer, which is a standalone event with location (Amman, Jordan) and context (humanitarian response). This omission reduces the completeness of the extraction.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+12,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapsed in southern Brazil, causing flooding"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Hydroelectric dam burst between Cotiporã and Bento Gonçalves"",
+      ""location"": ""between Cotiporã and Bento Gonçalves, southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Electricity cut off affecting nearly 300,000 residents"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The death toll has risen to 57."",
+    ""The bursting of the small hydroelectric dam sent a two-meter wave of muddy water."",
+    ""Governor Eduardo Leite described it as 'the worst climate disaster in the state's history.'""
+  ],
+  ""status"": [""Ongoing"", ""Ongoing"", ""Ongoing""],
+  ""evidence_minutes"": [
+    ""57 High death toll"",
+    ""two-meter wave of muddy water"",
+    ""worst climate disaster""
+  ]
+}",9,"The extraction is largely accurate and well-structured, correctly identifying three key events (dam collapse, hydroelectric dam burst, electricity cutoff) with appropriate locations, severity ratings, and status. The evidence snippets are relevant and directly support the events. The schema is correctly followed. The only minor issue is that the 'evidence_minutes' field contains paraphrased summaries rather than direct quotes or exact phrases from the text, which slightly deviates from the expectation of using verbatim evidence. Additionally, the status array is redundant since status is already included in each event object. These are small flaws but do not undermine the overall accuracy.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+12,3,"{
+  ""events"": [
+    {
+      ""event"": ""GDL train drivers' union launched a 35-hour nationwide strike"",
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""The strike began at 2:00 AM."",
+        ""Deutsche Bahn noted that only 20% of long-distance trains would run."",
+        ""The German Economic Institute estimates the cost at 100 million euros per day.""
+      ]
+    }
+  ]
+}",9,"The extraction is largely accurate and well-structured. The event is correctly identified as the GDL train drivers' union launching a 35-hour nationwide strike, with appropriate location (Germany), severity (Critical — justified by the nationwide disruption and economic impact), and status (Ongoing — supported by the strike beginning at 2:00 AM and no end time mentioned). The evidence provided directly supports the event’s impact. The schema is correctly followed. The only minor flaw is that the status 'Ongoing' is slightly speculative; the article states the strike began but does not confirm it is still ongoing at the time of writing. However, given the context and typical usage in event extraction, this is a reasonable inference. A perfect score would require explicit confirmation of ongoing status.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+13,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation; 85,000 children may have died"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Martin Griffiths urged troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Chris Bain reported rising numbers of displaced civilians"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""We see immense suffering"",
+    ""pressed for troop withdrawal"",
+    ""rising numbers of displaced civilians""
+  ]
+}",8,"The extraction is largely factual and correctly follows the schema with three well-defined events, appropriate locations, and accurate severity and status labels. The evidence snippets are relevant and directly tied to the events. However, the event 'Chris Bain reported rising numbers of displaced civilians' is factually inaccurate: Chris Bain is the CEO of CAFOD and is quoted as saying 'We see immense suffering,' but the article does not state that he personally reported the rising numbers of displaced civilians — that observation is attributed to 'aid workers.' This misattribution reduces accuracy. Additionally, the evidence list is too brief and could include more direct quotes or phrases that fully support each event, such as 'more than 14 million people are facing starvation' or '85,000 children may have already died.'","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+13,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapsed in southern Brazil, causing flooding"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Hydroelectric dam burst between Cotiporã and Bento Gonçalves"",
+      ""location"": ""between Cotiporã and Bento Gonçalves, southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Electricity cut off affecting nearly 300,000 residents"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The death toll has risen to 57."",
+    ""The bursting of the small hydroelectric dam sent a two-meter wave of muddy water."",
+    ""Governor Eduardo Leite described it as 'the worst climate disaster in the state's history.'""
+  ],
+  ""status"": [""Ongoing"", ""Ongoing"", ""Ongoing""],
+  ""evidence_minutes"": [
+    ""57 High death toll"",
+    ""two-meter wave of muddy water"",
+    ""worst climate disaster""
+  ]
+}",9,"The extraction is largely accurate and well-structured, correctly identifying three key events (dam collapse, hydroelectric dam burst, electricity cutoff) with appropriate locations, severity ratings, and status. The evidence snippets are relevant and directly support the events. The schema is correctly followed. The only minor issue is that the 'evidence_minutes' field contains paraphrased summaries rather than direct quotes or exact phrases from the text, which slightly deviates from the intent of 'evidence' as a direct textual reference. Additionally, the death toll of 57 is a critical piece of information that should have been included as a separate event or at least explicitly tied to the dam collapse event for completeness, as it underscores the severity. However, the overall extraction is strong and captures the core facts.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+13,3,"{
+  ""events"": [
+    {
+      ""event"": ""GDL train drivers' union launched a 35-hour nationwide strike"",
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""The strike began at 2:00 AM."",
+        ""Deutsche Bahn noted that only 20% of long-distance trains would run."",
+        ""The German Economic Institute estimates the cost at 100 million euros per day.""
+      ]
+    }
+  ]
+}",9,"The extraction is largely accurate and well-structured. The event 'GDL train drivers' union launched a 35-hour nationwide strike' is factually correct and directly supported by the article. The location 'Germany' is properly inferred. The severity 'Critical' is reasonable given the nationwide impact and economic cost. The status 'Ongoing' is appropriate since the strike began at 2:00 AM and the article does not indicate it has ended. The evidence provided is relevant and directly supports the event. The schema is correctly followed. The only minor issue is that the article does not explicitly state the strike is still ongoing at the time of writing — it only states when it began. While 'Ongoing' is a reasonable inference, it is not explicitly confirmed, which slightly reduces the score.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+14,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation in Yemen"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Martin Griffiths urged troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Chris Bain reported rising numbers of displaced civilians"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""more than 14 million people are facing starvation"",
+    ""85,000 children may have already died"",
+    ""We see immense suffering"",
+    ""pressed for troop withdrawal"",
+    ""aid workers report rising numbers of displaced civilians""
+  ],
+  ""status"": [
+    ""Ongoing"",
+    ""Ongoing"",
+    ""Ongoing""
+  ],
+  ""location"": ""Yemen"",
+  ""severity"": ""Critical"",
+  ""evidence_minutes"": [""after nearly four years of war"", ""immense suffering"", ""urged for withdrawal"", ""rising numbers of displaced civilians""]
+}",8,"The extraction is largely accurate and well-structured, correctly identifying key events, locations, and severity levels based on the article. The events are factually supported by the text, and the schema is mostly correct with appropriate fields. However, there are two issues: First, the 'status' field is duplicated both inside the events array and as a separate top-level array, which is redundant and inconsistent with standard schema design. Second, the 'evidence_minutes' field is incorrectly named and contains content that overlaps with 'evidence'—it should be either 'evidence' or a separate field like 'context' or 'timeframe', but not both. Additionally, the event about 85,000 children dying is a significant factual claim in the article but is missing from the events list, which reduces completeness.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+14,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapsed in southern Brazil, causing flooding"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Hydroelectric dam burst between Cotiporã and Bento Gonçalves"",
+      ""location"": ""Cotiporã-Bento Gonçalves area, southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Electricity cut off affecting nearly 300,000 residents"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The death toll has risen to 57."",
+    ""The bursting of the small hydroelectric dam sent a two-meter wave of muddy water."",
+    ""Governor Eduardo Leite described it as \""the worst climate disaster in the state's history.\""""
+  ],
+  ""location"": ""southern Brazil"",
+  ""severity"": ""Critical"",
+  ""status"": ""Ongoing""
+}",9,"The extraction is largely accurate and well-structured. The events correctly capture the dam collapse, its specific location between Cotiporã and Bento Gonçalves, and the electricity outage — all supported by the article. The severity is appropriately labeled 'Critical' given the 57 deaths and the governor’s characterization of the event as the worst climate disaster in state history. The schema is correctly followed with proper fields and structure. The only minor issue is that the evidence section includes supporting statements but omits direct reference to the electricity cutoff, which is a key event. While the event is correctly extracted, the evidence should ideally include the sentence about the power outage for full traceability.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+14,3,"{
+  ""events"": [
+    {
+      ""event"": ""German transport network halted; GDL train drivers' union launched 35-hour strike"",
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Deutsche Bahn reports only 20% of long-distance trains will run"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""German Economic Institute estimates cost at 100 million euros per day"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The strike began at 2:00 AM"",
+    ""Deutsche Bahn noted that only 20% of long-distance trains would run"",
+    ""The cost is estimated at 100 million euros per day""
+  ],
+  ""location"": ""Germany"",
+  ""severity"": ""Critical"",
+  ""status"": ""Ongoing""
+}",9,"The extraction is largely accurate and well-structured, correctly identifying three key events from the article with appropriate locations, severities, and statuses. The factuality is sound: the strike did halt transport, Deutsche Bahn did report 20% service, and the German Economic Institute did estimate daily costs. The schema is correctly followed with proper nesting of events and evidence. The overall severity and status are appropriately labeled as 'Critical' and 'Ongoing'. The only minor issue is that the evidence list omits the explicit mention of the GDL union launching the strike, which is a key factual component in the first event. Including 'Germany’s transport network ground to a halt as the GDL train drivers' union launched a 35-hour nationwide strike' in the evidence would strengthen alignment.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+15,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation in Yemen"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Martin Griffiths urged troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Chris Bain reported rising numbers of displaced civilians"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""more than 14 million people are facing starvation"",
+    ""85,000 children may have already died"",
+    ""We see immense suffering""
+  ],
+  ""status"": [
+    ""Ongoing"",
+    ""Ongoing"",
+    ""Ongoing""
+  ],
+  ""evidence_minutes"": [
+    ""immense suffering"",
+    ""rising numbers of displaced civilians"",
+    ""pressing for troop withdrawal""
+  ]
+}
+",6,"The extraction correctly identifies three key events with appropriate locations and statuses, and the schema structure is mostly correct. However, there are significant issues: 1) The 'evidence' field contains phrases that are not direct quotes or direct evidence for the events listed — '85,000 children may have already died' and 'We see immense suffering' are not tied to the specific events in the list; 2) The 'evidence_minutes' field is mislabeled and contains content that duplicates or misaligns with the actual evidence (e.g., 'pressing for troop withdrawal' is an event, not evidence); 3) The event about 85,000 children dying is a critical fact in the article but is completely missing from the 'events' list, which is a major oversight. These errors reduce accuracy and reliability.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+15,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapsed in southern Brazil, causing flooding"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Hydroelectric dam burst between Cotiporã and Bento Gonçalves"",
+      ""location"": ""Cotiporã-Bento Gonçalves area, southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Electricity cut off affecting nearly 300,000 residents"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The death toll has risen to 57."",
+    ""The bursting of the small hydroelectric dam sent a two-meter wave of muddy water."",
+    ""Governor Eduardo Leite described it as \""the worst climate disaster in the state's history.\""""
+  ],
+  ""location"": ""southern Brazil"",
+  ""severity"": ""Critical"",
+  ""status"": ""Ongoing""
+}",9,"The extraction is largely accurate and well-structured. The events correctly capture the dam collapse, its specific location between Cotiporã and Bento Gonçalves, and the electricity outage — all supported by the article. The severity is appropriately labeled 'Critical' given the 57 deaths and the governor’s characterization of the event as the worst climate disaster in state history. The schema is correctly followed. The only minor issue is that the evidence section includes supporting statements but omits the direct mention of the 300,000 residents affected by the power outage, which is a key factual detail that should have been included as evidence for the electricity event. Additionally, while the overall location is correct, the specific towns could have been more explicitly tied to the evidence for precision.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+15,3,"{
+  ""events"": [
+    {
+      ""event"": ""German train strike begins nationwide"",
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Deutsche Bahn reports reduced long-distance service"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""German Economic Institute estimates cost at 100 million euros per day"",
+      ""location"": ""Germany"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""The strike began at 2:00 AM"",
+    ""Deutsche Bahn noted that only 20% of long-distance trains would run"",
+    ""Deutsche Bahn noted the cost at 100 million euros per day""
+  ],
+  ""location"": ""Germany"",
+  ""severity"": ""Critical"",
+  ""status"": ""Ongoing""
+}",8,"The extraction is largely accurate and follows the correct schema with appropriate events, location, severity, and status. The events capture key facts from the article: the nationwide strike, reduced service by Deutsche Bahn, and the economic cost estimate. However, there is a factual error in the evidence section: it incorrectly attributes the 100 million euro cost estimate to Deutsche Bahn, when the article clearly states it is from the German Economic Institute. This misattribution reduces accuracy. Additionally, while the schema is correctly structured, the extraction misses the specific duration of the strike (35 hours) and the name of the union (GDL), which are relevant contextual details that could enhance the event's completeness.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+16,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation in Yemen"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Martin Griffiths urged troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Chris Bain reported rising numbers of displaced civilians"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""more than 14 million people are facing starvation"",
+    ""85,000 children may have already died"",
+    ""pressed for troop withdrawal from Hodeida""
+  ],
+  ""attribution"": [
+    [""CAFD""],
+    [""Chris Bain""],
+    [""CAFOD""]
+  ]
+}",6,"The extraction is mostly factual and follows the correct schema, but contains notable errors. First, 'CAFD' in the attribution is a misspelling of 'CAFOD' — this is a critical error in proper noun attribution. Second, the evidence list omits the key fact about 85,000 children dying, which is a major humanitarian point in the article and should be included as evidence for the starvation event. Third, the event 'Chris Bain reported rising numbers of displaced civilians' is inaccurate: the article states that 'aid workers report' rising displacement, and Chris Bain is quoted as saying 'We see immense suffering' — not directly reporting on displaced civilians. This misattributes the source. The severity and status labels are appropriate, but the attribution and evidence inaccuracies reduce reliability.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+16,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapsed between Cotiporã and Bento Gonçalves"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""The bursting of the small hydroelectric dam sent a two-meter wave of muddy water."",
+        ""Electricity is cut off for nearly 300,000 residents.""
+      ],
+      ""attribution"": []
+    }
+  ]
+}",8,"The extraction is mostly accurate and follows the correct schema. The event 'Dam collapsed between Cotiporã and Bento Gonçalves' is factually supported by the article, and the location 'southern Brazil' is correct. The severity 'Critical' is reasonable given the death toll and widespread power outages, and the status 'Ongoing' is plausible as the article does not indicate resolution. The evidence provided is relevant. However, the attribution field is empty despite the article clearly attributing the disaster description to Governor Eduardo Leite, which should have been included. Additionally, the death toll of 57 and the description of the event as 'the worst climate disaster in the state's history' are significant contextual details that could enhance the event's severity or add a secondary event entry.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+16,3,"{
+  ""events"": [
+    {
+      ""event"": ""German transport network ground to a halt"",
+      ""location"": ""Berlin, Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""The strike began at 2:00 AM."",
+        ""Deutsche Bahn noted that only 20% of long-distance trains would run."",
+        ""The German Economic Institute estimates the cost at 100 million euros per day.""
+      ],
+      ""attribution"": []
+    }
+  ]
+}",8,"The extraction is largely factual and correctly follows the schema. The event 'German transport network ground to a halt' is accurately supported by the article, with appropriate evidence cited (strike timing, reduced train service, economic cost). The location 'Berlin, Germany' is reasonable since Berlin is the cited city and the strike is nationwide. Severity 'Critical' and status 'Ongoing' are justified given the scale and impact. However, the attribution field is empty when it should include the GDL train drivers' union as the actor behind the strike, which is explicitly named in the article. This omission reduces the completeness of the extraction.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+17,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation in Yemen"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""After nearly four years of war, more than 14 million people are facing starvation"",
+        ""85,000 children may have already died""
+      ],
+      ""attribution"": []
+    },
+    {
+      ""event"": ""Martin Griffiths pressed for troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""Martin Griffiths, U.N. special envoy, pressed for troop withdrawal from Hodeida""
+      ],
+      ""attribution"": []
+    },
+    {
+      ""event"": ""Chris Bain reported rising numbers of displaced civilians"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""Chris Bain, CEO of CAFOD, said 'We see immense suffering'""
+      ],
+      ""attribution"": []
+    }
+  ]
+}",7,"The extraction is mostly accurate and follows the correct schema with properly structured events, locations, severity levels, and evidence. The first two events are factually correct and well-supported by the text. However, the third event misattributes the statement: Chris Bain said 'We see immense suffering,' but the text does not explicitly state that he reported rising numbers of displaced civilians — that claim is attributed to 'aid workers' in the article. This is a misattribution that reduces accuracy. Additionally, the event about 85,000 children dying is included in the evidence for starvation but should be its own distinct event due to its significance and separate factual claim. The schema is correct, but the content has one critical misattribution and one missed event.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+17,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapse in southern Brazil causing flooding"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""The death toll has risen to 57."",
+        ""Electricity is cut off for nearly 300,000 residents."",
+        ""Pressured for the worst climate disaster in the state's history.""
+      ],
+      ""attribution"": []
+    }
+  ]
+}",7,"The extraction is mostly factual and correctly structured according to the schema. The event 'Dam collapse in southern Brazil causing flooding' is accurately derived from the article, and the location, severity ('Critical'), and status ('Ongoing') are appropriately assigned. The evidence includes relevant supporting details like death toll and power outages. However, the evidence line 'Pressured for the worst climate disaster in the state's history.' is incorrect — it misquotes the governor’s statement, which was 'the worst climate disaster in the state's history,' not 'pressured for.' This is a factual error in evidence. Additionally, the attribution field is empty but should include Governor Eduardo Leite as the source of the quote. These omissions reduce the accuracy and completeness of the extraction.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+17,3,"{
+  ""events"": [
+    {
+      ""event"": ""German transport network ground to a halt"",
+      ""location"": ""Berlin, Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""The strike began at 2:00 AM."",
+        ""Deutsche Bahn noted that only 20% of long-distance trains would run."",
+        ""The German Economic Institute estimates the cost at 100 million euros per day.""
+      ],
+      ""attribution"": []
+    }
+  ]
+}",8,"The extraction is largely factual and correctly follows the schema. The event 'German transport network ground to a halt' is accurately supported by the article, with appropriate evidence cited (strike timing, reduced train service, economic cost). The location 'Berlin, Germany' is reasonable as Berlin is the cited city and the strike is nationwide. Severity 'Critical' and status 'Ongoing' are justified given the scale and impact. However, the attribution field is empty when it should include the GDL train drivers' union as the actor responsible for the strike, which is explicitly mentioned in the article. This omission reduces the completeness of the extraction.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+18,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation in Yemen"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""After nearly four years of war, more than 14 million people are facing starvation"",
+        ""85,000 children may have already died""
+      ],
+      ""attribution"": []
+    },
+    {
+      ""event"": ""Martin Griffiths pressed for troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""Martin Griffiths, U.N. special envoy, pressed for troop withdrawal from Hodeida""
+      ],
+      ""attribution"": []
+    },
+    {
+      ""event"": ""Chris Bain reported rising numbers of displaced civilians"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""Chris Bain, CEO of CAFOD, said 'We see immense suffering'""
+      ],
+      ""attribution"": [""Chris Bain""]
+    }
+  ]
+}",7,"The extraction is mostly accurate and follows the correct schema with properly structured events, locations, severity levels, and attribution. The facts reported are directly supported by the article: the starvation crisis, Griffiths' call for troop withdrawal, and Bain's statement about suffering are all correctly extracted. However, there is a factual misattribution in the third event: the evidence cites Bain saying 'We see immense suffering,' but the event claims he 'reported rising numbers of displaced civilians' — the article states that 'aid workers report rising numbers of displaced civilians,' not Bain himself. This misattribution reduces accuracy. Additionally, the event about 85,000 children dying is included in evidence but not as a separate event, which is a missed opportunity to capture a distinct, critical event.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+18,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapse in southern Brazil causing flooding"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""The death toll has risen to 57."",
+        ""Electricity is cut off for nearly 300,000 residents."",
+        ""Pressured for the worst climate disaster in the state's history.""
+      ],
+      ""attribution"": []
+    }
+  ]
+}",7,"The extraction is mostly factual and correctly structured according to the schema. The event 'Dam collapse in southern Brazil causing flooding' is accurately derived from the article, and the location, severity ('Critical'), and status ('Ongoing') are appropriately assigned. The evidence includes relevant supporting details like death toll and power outages. However, the evidence contains an error: 'Pressured for the worst climate disaster...' is a misquote — the article says 'Governor Eduardo Leite described it as 'the worst climate disaster in the state's history.' The attribution field is also empty, but the governor’s statement is a key piece of evidence that should be attributed to him. These inaccuracies reduce the score.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+18,3,"{
+  ""events"": [
+    {
+      ""event"": ""German transport network ground to a halt"",
+      ""location"": ""Berlin, Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""The strike began at 2:00 AM."",
+        ""Deutsche Bahn noted that only 20% of long-distance trains would run."",
+        ""The German Economic Institute estimates the cost at 100 million euros per day.""
+      ],
+      ""attribution"": []
+    }
+  ]
+}",8,"The extraction is largely factual and correctly follows the schema. The event 'German transport network ground to a halt' is accurately supported by the article, with appropriate evidence cited (strike timing, reduced train service, economic cost). The location 'Berlin, Germany' is reasonable as Berlin is the cited city and the strike is nationwide. Severity 'Critical' and status 'Ongoing' are justified given the scale and impact. However, the attribution field is empty when it should include the GDL train drivers' union as the actor behind the strike, which is explicitly named in the article. This omission reduces the completeness of the extraction.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+19,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation in Yemen"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""More than 14 million people are facing starvation"",
+        ""85,000 children may have already died""
+      ],
+      ""attribution"": []
+    },
+    {
+      ""event"": ""Martin Griffiths pressed for troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""Martin Griffiths, U.N. special envoy, pressed for troop withdrawal""
+      ],
+      ""attribution"": []
+    },
+    {
+      ""event"": ""Chris Bain reported rising numbers of displaced civilians"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""aid workers report rising numbers of displaced civilians""
+      ],
+      ""attribution"": [""Chris Bain""]
+    }
+  ]
+}",7,"The extraction is mostly accurate and follows the correct schema with properly structured events, locations, severity levels, and evidence. The factuality is largely correct: the numbers of people facing starvation and child deaths are directly quoted from the article, and Martin Griffiths’ role and action are accurately represented. However, there is a factual error in the third event: the article states that 'aid workers report rising numbers of displaced civilians,' not Chris Bain. Attributing this observation to Chris Bain is misleading — while he is quoted about 'immense suffering,' the specific claim about displaced civilians is attributed to aid workers generally. This misattribution reduces accuracy. Additionally, the event '85,000 children may have already died' is included as evidence but not extracted as a separate event, which is a missed opportunity to capture a distinct, critical event.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+19,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapsed in southern Brazil, causing flooding and electricity loss"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""The death toll has risen to 57."",
+        ""Electricity is cut off for nearly 300,000 residents."",
+        ""Pressured for the worst climate disaster in the state's history.""
+      ],
+      ""attribution"": []
+    }
+  ]
+}",7,"The extraction is mostly factual and correctly follows the schema, with accurate location, severity, and status. The event description captures the dam collapse, flooding, and electricity loss as described in the article. However, the evidence contains an error: 'Pressured for the worst climate disaster...' is a misquote — the article states Governor Leite described it as 'the worst climate disaster in the state's history,' not that he was 'pressured for' it. This misattribution reduces accuracy. Additionally, the attribution field is empty but should include Governor Eduardo Leite as the source of the climate disaster quote. One minor event — the 2-meter wave of muddy water — is not explicitly reflected in the event description, though it's implied in 'flooding.'","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+19,3,"{
+  ""events"": [
+    {
+      ""event"": ""German transport network halted due to 35-hour strike"",
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""The strike began at 2:00 AM."",
+        ""Deutsche Bahn noted only 20% of long-distance trains would run."",
+        ""German Economic Institute estimates cost at 100 million euros per day.""
+      ],
+      ""attribution"": []
+    }
+  ]
+}",9,"The extraction is largely accurate and well-structured. The event correctly captures the core incident — a 35-hour strike causing a halt in Germany’s transport network — with appropriate severity ('Critical') and status ('Ongoing') based on the article. The evidence provided directly supports the event with factual quotes from the text. The schema is correctly followed. The only minor issue is the lack of attribution: while the article cites Deutsche Bahn and the German Economic Institute, these sources are not listed in the 'attribution' field, which should include them for full transparency. This is a small but notable omission in a data audit context.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+20,1,"{
+  ""events"": [
+    {
+      ""event"": ""More than 14 million people facing starvation in Yemen"",
+      ""location"": ""Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Martin Griffiths urged troop withdrawal from Hodeida"",
+      ""location"": ""Hodeida, Yemen"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing""
+    },
+    {
+      ""event"": ""Chris Bain reported rising numbers of displaced civilians"",
+      ""location"": ""Yemen"",
+      ""severity"": ""High"",
+      ""status"": ""Ongoing""
+    }
+  ],
+  ""evidence"": [
+    ""more than 14 million people are facing starvation"",
+    ""85,000 children may have already died"",
+    ""We see immense suffering due to 85,000 child deaths""
+  ],
+  ""attribution"": [],
+  ""location"": ""Yemen"",
+  ""severity"": ""Critical"",
+  ""status"": ""Ongoing""
+}",7,"The extraction correctly identifies three key events with appropriate locations, severity, and status, and the schema is properly followed. However, the evidence section contains an inaccurate inference: 'We see immense suffering due to 85,000 child deaths' is not stated in the article — the text mentions both immense suffering and child deaths as separate facts, not causally linked. Additionally, the attribution field is empty despite clear attribution to Chris Bain and Martin Griffiths in the article. The event about 85,000 child deaths is also missing from the events list, which is a significant omission given its gravity and direct mention in the text.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+20,2,"{
+  ""events"": [
+    {
+      ""event"": ""Dam collapsed in southern Brazil, causing flooding"",
+      ""location"": ""southern Brazil"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""The death toll has risen to 57"",
+        ""Electricity is cut off for nearly 300,000 residents"",
+        ""Pressured for the worst climate disaster in the state's history""
+      ],
+      ""attribution"": []
+    }
+  ]
+}",7,"The extraction is mostly factual and correctly follows the schema, with accurate event description, location, severity, and status. The evidence provided supports the event's impact, though one piece of evidence is misquoted: 'Pressured for the worst climate disaster...' should be 'Governor Eduardo Leite described it as the worst climate disaster...' — this misattribution weakens credibility. The attribution field is empty but should include the governor as the source of the quote. No additional events are missing, as the article focuses on a single incident. The score reflects strong accuracy with minor errors in evidence accuracy and attribution.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."
+20,3,"{
+  ""events"": [
+    {
+      ""event"": ""German transport network halted due to 35-hour strike"",
+      ""location"": ""Germany"",
+      ""severity"": ""Critical"",
+      ""status"": ""Ongoing"",
+      ""evidence"": [
+        ""The strike began at 2:00 AM."",
+        ""Deutsche Bahn noted only 20% of long-distance trains would run."",
+        ""German Economic Institute estimates cost at 100 million euros per day.""
+      ],
+      ""attribution"": []
+    }
+  ]
+}",9,"The extraction is largely accurate and well-structured. The event correctly captures the core incident — a 35-hour strike causing a halt in Germany’s transport network — with appropriate severity ('Critical') and status ('Ongoing') based on the article. The evidence provided directly supports the event with factual quotes from the text. The schema is correctly followed. The only minor issue is the lack of attribution: the article mentions Deutsche Bahn and the German Economic Institute as sources of information, but these are not listed in the 'attribution' field. Adding these would make the extraction more robust and properly credited.","Extract only factually supported events from the text: precise location (use broad accurate geography—nation if national, exact place if local; never use reporting tags like “AP” or “CNS” as locations), severity (Critical for large-scale death/injury or systemic disruption; High only for direct life-threatening conditions like starvation or disaster), and status (Ongoing/Resolved/Emerging—only if explicitly stated or clearly implied by context). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do NOT extract: official statements, appeals, metadata, attributions, estimates, demographic inferences (e.g., “child mortality”), or vague labels like “war impact.” If a death toll is stated, extract “High death toll” only if a number is given—never infer demographics. Location is the impact site, not the reporting source (e.g., appeal in Jordan for Yemen → event in Yemen). Consolidate redundant descriptions (e.g., “power outage” + “electricity cut” = one event). Never infer status or add unsourced details. All events must be distinct, grounded in direct textual evidence, and free of fabrication or assumption."

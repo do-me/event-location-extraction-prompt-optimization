@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "properties": {
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "event": {
+            "type": "string",
+            "description": "Exact phrasing or close paraphrase of the factual event as stated in the text (5-20 words). Must reflect the\u539f\u6587 wording or meaning without semantic distortion (e.g., 'pressed for' not 'urged')."
+          },
+          "location": {
+            "type": "string",
+            "description": "Precise geographic location where the event occurred. Use nation if national scope; exact city, region, or site if local. Never use media outlets, organizations, or reporting sources as locations."
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "Critical",
+              "High",
+              "Moderate",
+              "Low"
+            ],
+            "description": "Critical: large-scale death/injury or systemic disruption (e.g., death toll \u226510, major infrastructure collapse). High: direct life-threatening conditions (e.g., starvation, acute medical crisis). Moderate: significant disruption without immediate life threat. Low: minor impact. Include death tolls only if numerically stated."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Ongoing",
+              "Completed",
+              "Emerging"
+            ],
+            "description": "Ongoing: event is actively continuing with no defined end. Completed: event has definitively ended. Emerging: event is developing but not yet fully manifest. Status must be explicitly stated or logically inferred from temporal indicators (e.g., 'lasted 35 hours' \u2192 Completed)."
+          },
+          "evidence": {
+            "type": "string",
+            "description": "Direct quote or near-verbatim phrase from the text that supports the event. Must be a concrete, unambiguous snippet proving the event occurred."
+          }
+        },
+        "required": [
+          "event",
+          "location",
+          "severity",
+          "status",
+          "evidence"
+        ]
+      }
+    }
+  },
+  "required": [
+    "events"
+  ]
+}

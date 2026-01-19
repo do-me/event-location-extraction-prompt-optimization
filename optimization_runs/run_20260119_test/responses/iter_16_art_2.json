@@ -1,0 +1,15 @@
+{
+  "events": [
+    {
+      "event": "Dam collapsed between Cotiporã and Bento Gonçalves",
+      "location": "southern Brazil",
+      "severity": "Critical",
+      "status": "Ongoing",
+      "evidence": [
+        "The bursting of the small hydroelectric dam sent a two-meter wave of muddy water.",
+        "Electricity is cut off for nearly 300,000 residents."
+      ],
+      "attribution": []
+    }
+  ]
+}

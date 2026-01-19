@@ -1,0 +1,62 @@
+{
+  "base_url": "http://localhost:1234/v1",
+  "api_key": "lm-studio",
+  "student_model": "LiquidAI/LFM2.5-1.2B-Instruct-MLX-8bit",
+  "teacher_model": "mlx-community/Qwen3-Next-80B-A3B-Instruct-4bit",
+  "starting_prompt": "You are an event extraction AI. Extract only factually supported events directly stated or clearly implied in the text\u2014no fabrications, inferences, or assumptions. Each event must include: precise geographic location (use the broadest accurate geographic term reflecting where the event physically occurred or had direct impact\u2014never misattribute reporting locations, datelines, or bureau tags like \u201cAP\u201d or \u201cCNS\u201d as event sites; if an event spans a nation, use the national name, e.g., \u201cGermany\u201d; if localized, use exact place names like \u201cCotipor\u00e3\u201d or \u201cbetween Cotipor\u00e3 and Bento Gon\u00e7alves, Brazil\u201d; never use population counts or demographic descriptors as locations); severity (Critical for large-scale human suffering or systemic disruption\u2014e.g., 85,000 deaths, \u20ac100M/day economic loss; humanitarian appeals are High severity only if tied to direct life-threatening conditions like mass starvation or disaster); and status (e.g., Ongoing, Resolved, Emerging). Events must describe tangible physical occurrences, human impacts, or infrastructure disruptions\u2014never official statements, calls to action, appeals, metadata, or unsupported claims. If a death toll is reported, extract \u201cHigh death toll\u201d only if the number is explicitly stated; do not infer demographic specifics (e.g., \u201cchild mortality\u201d) unless the text explicitly states children died. Never extract \u201cChild mortality surge\u201d or similar terms from total death tolls without explicit mention of children. If an appeal is made for a location but occurs elsewhere (e.g., \u201cCAFOD called for prayer in Jordan for Yemen\u201d), the event location is Yemen\u2014the site of impact, not the reporting or issuing location. Consolidate overlapping descriptions (e.g., \u201cpower outage\u201d and \u201celectricity cut off\u201d are one event; \u201ctransport strike\u201d and \u201cstrike duration and impact\u201d must be merged into a single event with attributes). Avoid vague labels like \u201cWar impact reported\u201d\u2014use precise event terms such as \u201cStarvation crisis\u201d or \u201cDam collapse.\u201d Never extract institutional reports, cost estimates, analyses, or attributions (e.g., \u201cGerman Economic Institute estimated...\u201d) as standalone events\u2014attach them as attributes to primary physical events. If a climate disaster or flood is implied by context (e.g., dam collapse, widespread flooding), extract it as a distinct event if supported by direct physical impact. If location is stated broadly (e.g., \u201csouthern Brazil\u201d), do not over-specify to towns unless explicitly named as affected. Do not extract \u201cCall for prayer\u201d or similar NGO appeals as events unless they describe direct life-threatening conditions on the ground\u2014such appeals are metadata, not events. Never infer status (e.g., \u201cOngoing\u201d) unless explicitly stated or clearly implied by context (e.g., \u201ccontinued for 35 hours\u201d implies Ongoing; \u201cdam collapsed yesterday\u201d does not imply ongoing unless damage persists). All events must be distinct, non-redundant, and grounded in direct textual evidence\u2014omit uncertain, misattributed, or derivative details.",
+  "max_prompt_length": 2000,
+  "score_threshold": 9.3,
+  "min_iterations": 5,
+  "max_iterations": 20,
+  "student_model_lm_studio": "liquid/lfm2.5-1.2b",
+  "teacher_model_lm_studio": "qwen/qwen3-next-80b",
+  "use_mlx": true,
+  "optimization_target": "schema",
+  "starting_schema": {
+    "type": "object",
+    "properties": {
+      "events": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "event": {
+              "type": "string",
+              "description": "Short description (5-20 words)"
+            },
+            "location": {
+              "type": "string",
+              "description": "Country or region"
+            },
+            "severity": {
+              "type": "string",
+              "enum": [
+                "Critical",
+                "High",
+                "Moderate",
+                "Low"
+              ]
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "Ongoing",
+                "Completed",
+                "Emerging"
+              ]
+            }
+          },
+          "required": [
+            "event",
+            "location",
+            "severity",
+            "status"
+          ]
+        }
+      }
+    },
+    "required": [
+      "events"
+    ]
+  }
+}

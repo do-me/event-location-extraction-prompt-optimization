@@ -1,0 +1,28 @@
+{
+  "events": [
+    {
+      "event": "German train strike halted transport network",
+      "location": "Germany",
+      "severity": "Critical",
+      "status": "Ongoing"
+    },
+    {
+      "event": "Deutsche Bahn reduced long-distance service to 20%",
+      "location": "Germany",
+      "severity": "High",
+      "status": "Ongoing"
+    },
+    {
+      "event": "German Economic Institute estimates cost at 100 million euros per day",
+      "location": "Germany",
+      "severity": "High",
+      "status": "Ongoing"
+    }
+  ],
+  "evidence": [
+    "The strike began at 2:00 AM.",
+    "Only 20% of long-distance trains would run.",
+    "Deutsche Bahn noted the disruption.",
+    "Estimates the cost at 100 million euros per day."
+  ]
+}

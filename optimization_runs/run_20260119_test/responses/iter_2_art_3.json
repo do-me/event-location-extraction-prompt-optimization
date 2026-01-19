@@ -1,0 +1,18 @@
+{
+  "events": [
+    {
+      "event": "GDL train drivers' union launched a 35-hour nationwide strike",
+      "location": "Germany",
+      "severity": "Critical",
+      "status": "Ongoing",
+      "evidence": "The strike began at 2:00 AM and Deutsche Bahn noted only 20% of long-distance trains would run."
+    },
+    {
+      "event": "German Economic Institute estimates cost at 100 million euros per day",
+      "location": "Germany",
+      "severity": "High",
+      "status": "Ongoing",
+      "evidence": "Deutsche Bahn noted significant operational disruption."
+    }
+  ]
+}

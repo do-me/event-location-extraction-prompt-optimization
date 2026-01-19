@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "properties": {
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "event": {
+            "type": "string",
+            "description": "Short description (5-20 words)"
+          },
+          "location": {
+            "type": "string",
+            "description": "Country or region"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "Critical",
+              "High",
+              "Moderate",
+              "Low"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Ongoing",
+              "Completed",
+              "Emerging"
+            ]
+          }
+        },
+        "required": [
+          "event",
+          "location",
+          "severity",
+          "status"
+        ]
+      }
+    }
+  },
+  "required": [
+    "events"
+  ]
+}

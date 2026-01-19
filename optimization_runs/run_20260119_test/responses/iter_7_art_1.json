@@ -1,0 +1,27 @@
+{
+  "events": [
+    {
+      "event": "More than 14 million people facing starvation; 85,000 children may have died",
+      "location": "Yemen",
+      "severity": "Critical",
+      "status": "Ongoing"
+    },
+    {
+      "event": "Martin Griffiths urged troop withdrawal from Hodeida",
+      "location": "Hodeida, Yemen",
+      "severity": "Critical",
+      "status": "Ongoing"
+    },
+    {
+      "event": "Chris Bain reported rising numbers of displaced civilians",
+      "location": "Yemen",
+      "severity": "High",
+      "status": "Ongoing"
+    }
+  ],
+  "evidence": [
+    "more than 14 million people are facing starvation",
+    "85,000 children may have already died",
+    "We see immense suffering"
+  ]
+}

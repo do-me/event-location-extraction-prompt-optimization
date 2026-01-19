@@ -1,0 +1,16 @@
+{
+  "events": [
+    {
+      "event": "German transport network ground to a halt",
+      "location": "Berlin, Germany",
+      "severity": "Critical",
+      "status": "Ongoing",
+      "evidence": [
+        "The strike began at 2:00 AM.",
+        "Deutsche Bahn noted that only 20% of long-distance trains would run.",
+        "The German Economic Institute estimates the cost at 100 million euros per day."
+      ],
+      "attribution": []
+    }
+  ]
+}

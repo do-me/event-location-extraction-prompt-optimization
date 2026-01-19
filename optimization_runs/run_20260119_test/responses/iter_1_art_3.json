@@ -1,0 +1,22 @@
+{
+  "events": [
+    {
+      "event": "Strike begins",
+      "location": "Germany",
+      "severity": "High",
+      "status": "Ongoing"
+    },
+    {
+      "event": "Deutsche Bahn operational impact",
+      "location": "Germany",
+      "severity": "Critical",
+      "status": "Ongoing"
+    },
+    {
+      "event": "Estimated daily cost",
+      "location": "Germany",
+      "severity": "High",
+      "status": "Ongoing"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+### **Prompt Engineering Summary: Event Extraction Best Practices**
+
+---
+
+#### **1. Techniques That Improved Scores**
+- **Explicit Exclusion Clauses**: Repeated emphasis on *not extracting* official statements, estimates, attributions, and demographic inferences (e.g., “never infer demographics”) significantly reduced hallucinations and over-extraction.
+- **Precision in Location Handling**: Clear instruction to use *impact site*, not reporting source (e.g., “appeal in Jordan for Yemen → event in Yemen”) eliminated geographic misattribution.
+- **Event Fidelity Rules**: Demanding *tangible physical occurrences* (disasters, casualties, infrastructure failures) and banning vague labels like “war impact” improved factual grounding.
+- **Evidence Integrity**: Repeated insistence that evidence must be *verbatim quotes or direct textual phrases* (not paraphrases or summaries) increased traceability and reduced misattribution.
+- **Schema Clarity**: Consistent schema structure (events as array of objects with location/severity/status) improved output consistency — *once redundancy (e.g., duplicate status arrays) was flagged, models adapted*.
+
+#### **2. Techniques That Caused Failures**
+- **Overly Broad or Vague Instructions**: Early versions lacked specificity on *what constitutes an event* vs. *evidence*, leading to inclusion of subjective statements (“We see immense suffering”) as events.
+- **Misleading Field Names**: “evidence_minutes” confused models — it was misused for summaries instead of timestamps, causing structural errors.
+- **Attribution Omissions**: Failing to explicitly require *attribution of sources* (e.g., “GDL union,” “Governor Leite”) led to critical omissions in later iterations.
+- **Inconsistent Schema Evolution**: Repeated schema changes (e.g., adding/removing `attribution`, `evidence_minutes`) caused confusion and inconsistent performance until stabilization in iterations 18–20.
+- **Over-Reliance on Inference**: Models occasionally inferred status (“Ongoing”) without explicit textual support — this was penalized in later critiques.
+
+#### **3. Best Practices for Event Extraction (Summary)**
+> **Extract only tangible, textually grounded events.**  
+> - **Location**: Always the *impact site*, never the source or reporter.  
+> - **Severity**: “Critical” = large-scale death/injury/systemic disruption; “High” = direct life-threatening conditions. *Never infer* — base on explicit scale.  
+> - **Status**: “Ongoing/Resolved/Emerging” *only if explicitly stated or clearly implied* (e.g., strike began at 2:00 AM with no end time → “Ongoing” is acceptable; no inference beyond context).  
+> - **Events**: Must be *distinct, physical occurrences* — e.g., “dam collapsed,” “85,000 children died,” “transport network halted.”  
+> - **Evidence**: Must be *verbatim quotes or exact phrases* from the text. No paraphrasing. Each event must have direct, non-redundant evidence.  
+> - **Attribution**: *Always include* the source of claims (e.g., “GDL union,” “Governor Leite,” “aid workers”).  
+> - **Schema**: Keep fields minimal and non-redundant. `events` array must contain all data; avoid top-level duplicates.  
+> - **Never**: Extract estimates, appeals, metadata, demographic inferences, or vague labels. If a death toll is stated, extract it as a *separate event* — do not bury it in evidence.
+
+---
+
+**Final Rule**:  
+> **“If it’s not in the text as a concrete occurrence, don’t extract it. If it’s attributed, name the source. If it’s evidence, quote it verbatim.”**

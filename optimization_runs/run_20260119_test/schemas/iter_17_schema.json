@@ -1,0 +1,66 @@
+{
+  "type": "object",
+  "properties": {
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "event": {
+            "type": "string",
+            "description": "Exact phrasing or close paraphrase of the factual event as stated in the text (5-20 words). Must reflect the original wording or meaning without semantic distortion (e.g., 'pressed for' not 'urged'). Events must describe tangible physical occurrences: disasters, infrastructure failures, human casualties, or direct impacts. Do not extract official statements, appeals, attributions, estimates, demographic inferences (e.g., 'child mortality'), or vague labels like 'war impact.' If an event describes an effect (e.g., 'transport halted'), ensure it is grounded in a direct physical cause mentioned in the text. Avoid figurative language unless it directly corresponds to a measurable physical outcome (e.g., 'ground to a halt' is acceptable if supported by evidence of total disruption). The event must not attribute observations or claims to individuals or organizations unless the text explicitly states that the person/organization directly observed or caused the event. For example, 'Chris Bain reported rising numbers of displaced civilians' is invalid if the text only says 'aid workers report rising numbers' and Bain is only quoting them."
+          },
+          "location": {
+            "type": "string",
+            "description": "Precise geographic location where the event occurred. Use nation if national scope; exact city, region, or site if local. Never use media outlets, organizations, NGOs, reporting sources, or speaker locations as locations. If an appeal or statement is made about a location (e.g., 'CAFOD calls for prayer for Yemen'), the location must be the geographic area affected by the event being described, not the speaker's location. If the geographic scope is not explicitly stated (e.g., '300,000 residents affected' without location details), do not assign a location beyond the broadest confirmed area (e.g., 'southern Brazil' if the dam is there, but not 'near the dam site' unless confirmed). If the event is national in scope, use the country name only; do not infer subnational locations without explicit mention."
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "Critical",
+              "High",
+              "Moderate"
+            ],
+            "description": "Critical: large-scale death/injury (e.g., death toll \u226510), widespread infrastructure collapse, or systemic humanitarian crisis with explicit quantitative or unambiguous qualitative evidence (e.g., 'immense suffering' only if explicitly tied to documented child deaths, mass displacement, or similar concrete physical harm). High: direct life-threatening conditions with explicit quantitative evidence (e.g., starvation affecting X people, acute medical crisis with quantified impact). Moderate: significant disruption without immediate life threat. Severity must be inferable only from explicit quantitative data or unambiguous qualitative indicators directly stated in the text\u2014never inferred from tone, context, attributions, or advocacy actions (e.g., 'calls for prayer' are not severity-worthy events). 'Immense suffering' alone is insufficient for severity classification; it must be explicitly paired with a measurable physical outcome in the same sentence or adjacent clause (e.g., 'We see immense suffering due to 85,000 child deaths'). If a death toll is stated, it must be included as a quantified component of the event description or severity justification (e.g., '57 dead' or 'over 14 million facing starvation')."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Ongoing",
+              "Completed",
+              "Emerging"
+            ],
+            "description": "Ongoing: event is actively continuing with explicit temporal indicators (e.g., 'still ongoing', 'continues', 'now in its 35th hour'). Completed: event has definitively ended with explicit end markers (e.g., 'lasted 35 hours', 'ended at 8 PM'). Emerging: event is developing but not yet fully manifest, with explicit indicators (e.g., 'rising', 'escalating', 'expected to worsen'). Status must be explicitly stated or logically deducible from clear temporal or directional language in the text\u2014no speculation, inference, or assumption allowed. If no temporal indicator is present, do not assign status. Duration alone (e.g., '35 hours') does not imply 'Ongoing' unless the event is confirmed to be still active at the time of reporting. For events with a start time but no end confirmation, status must be 'Emerging' or left unassigned if no directional language exists."
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "description": "One or more direct quotes or near-verbatim phrases from the text that unambiguously support the event. Each evidence item must be a verbatim or minimally paraphrased excerpt that directly corresponds to the event and location. Evidence must not include attributions (e.g., 'according to X', 'X reported') unless the attribution is part of the factual event itself (e.g., 'Deutsche Bahn noted that only 20% of long-distance trains would run'). Subjective statements (e.g., 'We see immense suffering') are permitted as evidence ONLY if they are explicitly tied to a measurable physical event with direct quantitative support in the same sentence or adjacent clause (e.g., 'We see immense suffering due to 200 civilian deaths'). All evidence must be directly extractable from the text without inference, paraphrasing, or contextual embellishment. Do not omit direct factual details from the text (e.g., death tolls, wave heights, time of onset) that substantiate the event. Do not include standalone subjective statements that lack direct quantitative or physical correlation to the event. Evidence must not duplicate other evidence items within the same event. Evidence must include all quantified data mentioned in the text directly related to the event (e.g., '57 dead', '14 million facing starvation') even if not in the same sentence as the main event phrase, as long as it is in the same paragraph or contextually adjacent and unambiguously linked."
+          },
+          "attribution": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "description": "List of entities (individuals, organizations, institutions) explicitly cited in the text as the source of any quantitative data, claim, or observation included in the event or evidence. This field is mandatory if any evidence item contains a quantitative claim, estimate, or attributed statement (e.g., 'CAFOD reports', 'Governor Eduardo Leite said', 'GDL train drivers' union confirmed'). Attribution must be extracted verbatim from the text and must correspond exactly to the source mentioned alongside the data. Do not infer, generalize, or misspell attributions. If no attribution is present in the text, this field must be an empty array. Proper nouns must be spelled exactly as in the source text (e.g., 'CAFOD', not 'CAFD')."
+          }
+        },
+        "required": [
+          "event",
+          "location",
+          "severity",
+          "status",
+          "evidence",
+          "attribution"
+        ]
+      }
+    }
+  },
+  "required": [
+    "events"
+  ]
+}

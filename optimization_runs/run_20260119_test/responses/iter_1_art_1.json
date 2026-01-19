@@ -1,0 +1,28 @@
+{
+  "events": [
+    {
+      "event": "Over 14 million people facing starvation",
+      "location": "Yemen",
+      "severity": "Critical",
+      "status": "Ongoing"
+    },
+    {
+      "event": "85,000 children may have died",
+      "location": "Yemen",
+      "severity": "Critical",
+      "status": "Ongoing"
+    },
+    {
+      "event": "Martin Griffiths urged troop withdrawal",
+      "location": "Hodeida, Yemen",
+      "severity": "High",
+      "status": "Ongoing"
+    },
+    {
+      "event": "Aid workers report rising displaced civilians",
+      "location": "Yemen",
+      "severity": "Moderate",
+      "status": "Ongoing"
+    }
+  ]
+}

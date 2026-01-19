@@ -1,0 +1,23 @@
+{
+  "events": [
+    {
+      "event": "More than 14 million people facing starvation; 85,000 children may have died",
+      "location": "Yemen",
+      "severity": "Critical",
+      "status": "Ongoing"
+    },
+    {
+      "event": "Martin Griffiths urged troop withdrawal from Hodeida",
+      "location": "Hodeida, Yemen",
+      "severity": "Critical",
+      "status": "Ongoing"
+    },
+    {
+      "event": "CAFOD calls for prayer for Yemen",
+      "location": "Jordan",
+      "severity": "Moderate",
+      "status": "Ongoing"
+    }
+  ],
+  "evidence": ["more than 14 million people facing starvation", "85,000 children may have already died", "pressed for troop withdrawal", "We see immense suffering"]
+}

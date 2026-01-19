@@ -1,0 +1,16 @@
+{
+  "events": [
+    {
+      "event": "Dam collapse in southern Brazil",
+      "location": "Brazil",
+      "severity": "Critical",
+      "status": "Ongoing"
+    },
+    {
+      "event": "Electricity cut off for 300,000 residents",
+      "location": "Brazil",
+      "severity": "High",
+      "status": "Ongoing"
+    }
+  ]
+}

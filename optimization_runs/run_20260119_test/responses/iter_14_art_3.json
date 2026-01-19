@@ -1,0 +1,30 @@
+{
+  "events": [
+    {
+      "event": "German transport network halted; GDL train drivers' union launched 35-hour strike",
+      "location": "Germany",
+      "severity": "Critical",
+      "status": "Ongoing"
+    },
+    {
+      "event": "Deutsche Bahn reports only 20% of long-distance trains will run",
+      "location": "Germany",
+      "severity": "High",
+      "status": "Ongoing"
+    },
+    {
+      "event": "German Economic Institute estimates cost at 100 million euros per day",
+      "location": "Germany",
+      "severity": "High",
+      "status": "Ongoing"
+    }
+  ],
+  "evidence": [
+    "The strike began at 2:00 AM",
+    "Deutsche Bahn noted that only 20% of long-distance trains would run",
+    "The cost is estimated at 100 million euros per day"
+  ],
+  "location": "Germany",
+  "severity": "Critical",
+  "status": "Ongoing"
+}

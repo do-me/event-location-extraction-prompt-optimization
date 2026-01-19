@@ -1,0 +1,25 @@
+{
+  "events": [
+    {
+      "event": "Strike began at 2:00 AM halting transport",  
+      "location": "Germany",
+      "severity": "Critical",
+      "status": "Ongoing",
+      "evidence": "The strike began at 2:00 AM and only 20% of long-distance trains would run."
+    },
+    {
+      "event": "Deutsche Bahn reports reduced service",  
+      "location": "Germany",
+      "severity": "High",
+      "status": "Ongoing",
+      "evidence": "Deutsche Bahn noted that only 20% of long-distance trains would run."
+    },
+    {
+      "event": "Estimated daily cost of disruption",  
+      "location": "Germany",
+      "severity": "High",
+      "status": "Ongoing",
+      "evidence": "The German Economic Institute estimates the cost at 100 million euros per day."
+    }
+  ]
+}
